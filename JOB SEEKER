@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jobseeker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background: #f4f9ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #jobseeker-box {
+            border: 2px solid #0066cc;
+            padding: 20px 30px;
+            border-radius: 6px;
+            background-color: #f4f9ff;
+            box-shadow: 0 4px 8px rgba(0,102,204,0.2);
+            width: 350px;   /* reduced width */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #0066cc;
+            font-size: 20px;
+        }
+        label {
+            display: block;
+            margin: 6px 0 3px;
+            color: #0066cc;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid #0066cc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            background: #0066cc;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 5px;
+        }
+        button:hover {
+            background: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div id="jobseeker-box">
+        <h2>JOBSEEKER</h2>
+        <form action="JobseekerServlet" method="post">
+            <label>USERNAME</label>
+            <input type="text" name="username" required>
+
+            <label>PASSWORD</label>
+            <input type="password" name="password" required>
+
+            <label>NAME</label>
+            <input type="text" name="name" required>
+
+            <label>PHNO</label>
+            <input type="text" name="phno" required>
+
+            <label>EMAIL</label>
+            <input type="email" name="email" required>
+
+            <label>DOMAIN</label>
+            <input type="text" name="domain" required>
+
+            <label>YREXP</label>
+            <input type="number" name="yrexp" required>
+
+            <button type="submit">ADD</button>
+        </form>
+    </div>
+</body>
+</html>
