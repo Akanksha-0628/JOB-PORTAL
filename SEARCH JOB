@@ -1,0 +1,155 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search Job</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f9ff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        #searchjob-box {
+            border: 2px solid #0066cc;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #f4f9ff;
+            box-shadow: 0 6px 12px rgba(0,102,204,0.2);
+            width: 85%;   /* Widen to fit like a portal */
+            margin-top: 40px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0066cc;
+            font-size: 24px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Two-column layout */
+            gap: 20px 40px;  /* row gap, column gap */
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #0066cc;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="text"] {
+            width: 100%;  /* Full width inside grid cell */
+            padding: 8px 12px;
+            border: 1px solid #0066cc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .full-width {
+            grid-column: span 2; /* Button row spans full width */
+            text-align: center;
+        }
+        button {
+            width: 40%;
+            padding: 10px 0;
+            border: none;
+            background: #0066cc;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #003366;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #0066cc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #0066cc;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #eaf2ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="searchjob-box">
+        <h2>SEARCH JOB</h2>
+        <form action="SearchJobServlet" method="post">
+            <div>
+                <label>DOMAIN</label>
+                <input type="text" name="domain" placeholder="Enter domain">
+            </div>
+
+            <div>
+                <label>JOB TITLE</label>
+                <input type="text" name="title" placeholder="Enter job title">
+            </div>
+
+            <div>
+                <label>COMPANY</label>
+                <input type="text" name="company" placeholder="Enter company">
+            </div>
+
+            <div>
+                <label>LOCATION</label>
+                <input type="text" name="location" placeholder="Enter location">
+            </div>
+
+            <div>
+                <label>EXPERIENCE</label>
+                <input type="text" name="experience" placeholder="Enter years of exp.">
+            </div>
+
+            <div class="full-width">
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Experience</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%-- Example rows (Replace with DB data dynamically) --%>
+                <tr>
+                    <td>101</td>
+                    <td>Java Developer</td>
+                    <td>ABC Tech</td>
+                    <td>Bangalore</td>
+                    <td>2 Yrs</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Web Designer</td>
+                    <td>XYZ Pvt Ltd</td>
+                    <td>Hyderabad</td>
+                    <td>1 Yr</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
