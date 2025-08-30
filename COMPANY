@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f9ff;
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+        .box {
+            border: 2px solid #0066cc;
+            padding: 25px;
+            border-radius: 6px;
+            background: #f4f9ff;
+            box-shadow: 0 4px 8px rgba(0,102,204,0.2);
+            width: 360px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 18px;
+            color: #0066cc;
+        }
+        label { display: block; margin: 8px 0 4px; color:#0066cc; font-weight: bold; }
+        input { width:100%; padding:7px; border:1px solid #0066cc; border-radius:4px; margin-bottom:12px; }
+        button { width:100%; padding:9px; border:none; background:#0066cc; color:white; font-weight:bold; border-radius:4px; cursor:pointer; }
+        button:hover { background:#003366; }
+    </style>
+</head>
+<body>
+    <div>
+        <%@ include file="adminMenu.jsp" %>
+        <div class="box">
+            <h2>ADD COMPANY</h2>
+            <form action="CompanyServlet" method="post">
+                <label>COMPANYID</label>
+                <input type="text" name="companyId" required>
+
+                <label>COMPNM</label>
+                <input type="text" name="companyName" required>
+
+                <label>PHNO</label>
+                <input type="text" name="phone" required>
+
+                <label>EMAIL</label>
+                <input type="email" name="email" required>
+
+                <label>ADDRESS</label>
+                <input type="text" name="address" required>
+
+                <button type="submit">SAVE</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
