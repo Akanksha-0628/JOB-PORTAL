@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+    .admin-menu {
+        display: flex;
+        background: #0066cc;
+        margin-bottom: 20px;
+    }
+    .admin-menu a {
+        flex: 1;
+        text-align: center;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-right: 1px solid white;
+        transition: background 0.3s;
+    }
+    .admin-menu a:hover {
+        background: #003366;
+    }
+</style>
+
+<div class="admin-menu">
+    <a href="Company.jsp">COMPANY</a>
+    <a href="CompanyUpd.jsp">UPDATE COMPANY</a>
+    <a href="CompanyDel.jsp">DELETE COMPANY</a>
+    <a href="Job.jsp">JOB</a>
+</div>
