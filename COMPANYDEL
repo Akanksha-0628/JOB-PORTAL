@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f9ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #box {
+            border: 2px solid #cc0000;
+            padding: 25px 30px;
+            border-radius: 6px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(204,0,0,0.2);
+            width: 320px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 18px;
+            color: #cc0000;
+        }
+        label {
+            display: block;
+            margin: 8px 0 4px;
+            color: #cc0000;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 7px 10px;
+            border: 1px solid #cc0000;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 9px;
+            background: #cc0000;
+            color: white;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #660000;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>DELETE COMPANY</h2>
+        <form action="CompanyDeleteServlet" method="post">
+            <label>COMPANYID</label>
+            <input type="text" name="companyid" required>
+
+            <button type="submit">DELETE</button>
+        </form>
+    </div>
+</body>
+</html>
