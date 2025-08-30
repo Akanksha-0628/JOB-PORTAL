@@ -1,28 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<style>
-    .admin-menu {
-        display: flex;
-        background: #0066cc;
-        margin-bottom: 20px;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background: #fdfdfd;
     }
-    .admin-menu a {
-        flex: 1;
-        text-align: center;
-        padding: 12px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        border-right: 1px solid white;
-        transition: background 0.3s;
-    }
-    .admin-menu a:hover {
-        background: #003366;
-    }
-</style>
 
-<div class="admin-menu">
-    <a href="Company.jsp">COMPANY</a>
-    <a href="CompanyUpd.jsp">UPDATE COMPANY</a>
-    <a href="CompanyDel.jsp">DELETE COMPANY</a>
-    <a href="Job.jsp">JOB</a>
-</div>
+    #main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border: 2px solid #cc0000;
+      border-radius: 6px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(204,0,0,0.2);
+    }
+
+    #lft h2 {
+      margin: 0;
+      color: #cc0000;
+      font-size: 22px;
+      white-space: nowrap;
+    }
+
+    #rgt {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-left: 30px;
+    }
+
+    #rgt a {
+      text-decoration: none;
+      color: #cc0000;
+      font-weight: bold;
+      font-size: 15px;
+      border: 2px solid #cc0000;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    #rgt a:hover {
+      background: #cc0000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <!-- Title -->
+    <div id="lft">
+      <h2>ADMIN MENU</h2>
+    </div>
+
+    <!-- Admin Menu Links -->
+    <div id="rgt">
+      <a href="addCompany.jsp">COMPANY</a>
+      <a href="updateCompany.jsp">UPDATE COMPANY</a>
+      <a href="deleteCompany.jsp">DELETE COMPANY</a>
+      <a href="manageJob.jsp">JOB</a>
+    </div>
+  </div>
+</body>
+</html>
