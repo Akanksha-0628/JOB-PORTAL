@@ -85,7 +85,7 @@
     box-sizing: border-box;
   }
    /* Save button */
-  #save_btn {
+  #del_btn {
     display: block;
     width: 120px;
     height: 40px;
@@ -133,7 +133,7 @@
 <form class="del_cmpn" aria-labelledby="job-form-title" autocomplete="off" novalidate>
 <h2 class="text-primary"> DELETE COMPANY</h2>
 <input type="text" class="form-control" name="company_id" placeholder="COMPANY ID"/>
-<input  id="save_btn" type="submit" class="btn btn-outline-primary" value="DELETE"/>
+<input  id="del_btn" type="submit" class="btn btn-outline-primary" value="DELETE"/>
 </form>
 
 </div>
@@ -143,4 +143,5 @@
 
 
 </body>
+
 </html>
